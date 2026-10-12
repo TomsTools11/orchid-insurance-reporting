@@ -8,11 +8,17 @@ GOAL reporting for **Orchid Agency Group**, deployed as a static site on Vercel.
 | --- | --- |
 | `index.html` | Campaign Configuration |
 | `reports/ia-auto-configuration.html` | IA Auto Campaign Configuration |
-| `reports/ia-home-configuration.html` | IA Home Campaign Configuration |
 
-The homepage is the campaign configuration overview. Each report is a single self-contained HTML file. The only
-external request is the Inter webfont from Google Fonts. There is no build step and
+The homepage links to the campaign configuration report. Each report is a single self-contained HTML file. The only
+external requests are the Sora and Outfit webfonts from Google Fonts. There is no build step and
 there are no dependencies.
+
+## Design
+
+Pages use the GOAL Structured Dashboard (v2) report design: sidebar navigation, Sora and Outfit type,
+and theme tokens. Each page opens in the viewer's system light or dark mode, has a light/dark toggle in the
+top-right corner (the choice is saved under the `goal-theme` key and shared across the site), and always
+prints light.
 
 ## Deploying on Vercel
 
